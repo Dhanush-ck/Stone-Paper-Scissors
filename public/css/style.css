@@ -26,8 +26,31 @@
 }
 
 .game-display{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:  
+        "first second"
+        "third fourth";
+    height: 300px;
+    gap: 5px;
+}
+
+.computer {
+    grid-area: first;
+    display: none;
+}
+
+.user {
+    grid-area: second;
+    display: none;
+}
+
+#computer-response{
+    grid-area: third;
+}
+
+#user-response{
+    grid-area: fourth;
 }
 
 .game-display img{
