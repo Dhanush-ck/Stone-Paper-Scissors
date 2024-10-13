@@ -13,54 +13,233 @@
     align-items: center;
     flex-direction: column;
     background: linear-gradient(180deg, #777, #222);
+    gap: 5px;
+}
+
+.container-element {
+    width: 60%;
+    /* height: 73%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ddd;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #9f9f9f;
+    border-radius: 20px;
 }
 
 .game-heading h2{
     font-size: 30px;
     font-weight: 500;
+    margin: 5px;
 }
 
 .score-board {
     font-size: 30px;
     font-weight: 700;
+    margin: 5px;
 }
 
 .game-display{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:  
-        "first second"
-        "third fourth";
     height: 300px;
-    gap: 5px;
+    /* gap: 5px; */
+    background-color: #9f9f9f;
+    width: 100%;
+    border-radius: 20px;
 }
 
 .computer {
-    grid-area: first;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #777;
+    margin: 20px 10px 20px 20px;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .user {
-    grid-area: second;
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #777;
+    margin: 20px 20px 20px 10px;
+    border-radius: 20px;
+    padding: 10px;
 }
 
-#computer-response{
+/* #computer-response{
     grid-area: third;
-}
+} */
 
-#user-response{
+/* #user-response{
     grid-area: fourth;
-}
+} */
 
 .game-display img{
     height: 200px;
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #9f9f9f;
+    width: 100%;
+    border-radius: 20px;
+}
+
 .result {
     font-size: 20px;
+    background-color: #777;
+    width: 20%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.game-choices {
+    background-color: #9f9f9f;
 }
 
 .game-choices img{
     height: 80px;
+    cursor: pointer;
+}
+
+.game-choices img:hover{
+    /* box-shadow:0 0 15px rgba(0, 0, 0, 1); */
+    filter: drop-shadow(0px 0px 5px #fff);
+}
+
+.game-options {
+    background-color: #777;
+    border-radius: 20px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    /* box-shadow: 0 0 5px #222; */
+}
+
+.game-options:hover{
+    box-shadow: 0 0 15px #fff;
+}
+
+#reset{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        height: 100vh;
+        width: 100vw;
+    }
+    
+    .container-element {
+        width: 80%;
+        /* height: 70%; */
+        padding: 10px;
+    }
+
+    .game-heading h2 {
+        font-size: 20px;
+    }
+
+    .game-display{
+        grid-template-columns: 1fr;
+    }
+
+    .computer{
+        margin: 20px 20px 10px 20px;
+    }
+
+    .user {
+        margin: 10px 20px 20px 20px;
+    }
+
+    .game-display img {
+        height: 70px;
+    }
+
+    .result {
+        font-size: 20px;
+        width: 60%;
+    }
+
+    .game-choices img:hover{
+        filter: none;
+    }
+    
+    .game-options {
+        width: 30%;
+        height: 30px;
+        
+    }
+    
+    .game-options:hover {
+        box-shadow: 0 0 0 ;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    
+    .game-display {
+        font-size: 25px;
+    }
+
+    .game-display img {
+        height: 150px;
+    }
+
+    .game-choices img:hover{
+        filter: none;
+    }
+
+    .game-options:hover {
+        box-shadow: 0 0 0 ;
+    }
+    
+    .result {
+        font-size: 20px;
+        width: 40%;
+    }
+
+    .game-options {
+        width: 25%;
+        height: 30px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .game-display {
+        height: 200px;
+    }
+
+    .game-display img{
+        height: 100px;
+    }
 }
