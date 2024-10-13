@@ -8,40 +8,45 @@
 </head>
 <body>
     <div class="container">
-        <div class="game-heading">
-            <h2>Stone Paper Scissors</h2>
-        </div>
-
-        <div class="score-board">
-            <span id="computer-score">0</span>
-            :
-            <span id="user-score">0</span>
-        </div>
+        <div class="container-element">
+            <header>
+                <div class="game-heading">
+                    <h2>Stone Paper Scissors</h2>
+                </div>
         
-        <div class="game-display">
-            <div class="computer">
-                <img src="" alt="AI's Choice" id="computer-image">
+                <div class="score-board">
+                    <span id="computer-score">0</span>
+                    :
+                    <span id="user-score">0</span>
+                </div>
+            </header>
+            
+            <div class="game-display">
+                <div class="computer">
+                    <img src="" alt="AI's Choice" id="computer-image">
+                    <span id="computer-response"></span>
+                </div>
+                <div class="user">
+                    <img src="" alt="User's Choice" id="user-image">
+                    <span id="user-response"></span>
+                </div>
             </div>
-            <div class="user">
-                <img src="" alt="User's Choice" id="user-image">
-            </div>
-            <span id="computer-response"></span>
-            <span id="user-response"></span>
-        </div>
-
-        <div class="result">
-            Click play to start
-        </div>
-
-        <div class="game-choices">
-            <img src="./img/stone.png" alt="Stone" class="options">
-            <img src="./img/paper.png" alt="Paper" class="options">
-            <img src="./img/scissor.png" alt="Scissors" class="options">
-        </div>
-
-        <div class="game-options">
-            <span id="reset">Reset</span>
-            <span id="play">Play</span>
+    
+            <footer>
+                <div class="result">
+                    Select your choice
+                </div>
+        
+                <div class="game-choices">
+                    <img src="./img/stone.png" alt="Stone" class="options">
+                    <img src="./img/paper.png" alt="Paper" class="options">
+                    <img src="./img/scissor.png" alt="Scissors" class="options">
+                </div>
+        
+                <div class="game-options">
+                    <span id="reset">Reset</span>
+                </div>
+            </footer>
         </div>
     </div>
 
